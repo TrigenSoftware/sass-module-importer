@@ -1,16 +1,16 @@
 {
-  "name": "sass-module-importer",
-  "version": "1.2.1",
+  "name": "sass-modules-importer",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "description": "Import Sass files from NPM and Bower Modules",
-  "author": "Lucas Motta <mail@lucasmotta.com> (lucasmotta.com)",
+  "author": "dangreen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucasmotta/sass-module-importer"
+    "url": "https://github.com/TrigenSoftware/sass-modules-importer"
   },
   "bugs": {
-    "url": "https://github.com/lucasmotta/sass-module-importer/issues"
+    "url": "https://github.com/TrigenSoftware/sass-modules-importer/issues"
   },
   "license": "MIT",
   "keywords": [

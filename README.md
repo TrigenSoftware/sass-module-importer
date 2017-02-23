@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/lucasmotta/sass-module-importer.svg?branch=master)](https://travis-ci.org/lucasmotta/sass-module-importer)
+[![NPM](https://nodei.co/npm/sass-modules-importer.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/sass-modules-importer/)
 
-# sass-module-importer
+# sass-modules-importer
 
 Simple importer for [node-sass](https://github.com/sass/node-sass) to import [npm](https://www.npmjs.com) and [bower](http://bower.io/search/) modules.
 
@@ -53,14 +53,14 @@ This tool it will also inline CSS files for you, since Sass [cannot import plain
 ### install
 
 ```sh
-npm install sass-module-importer --save-dev
+npm install sass-modules-importer --save-dev
 ```
 
 ### use the importer with [node-sass](https://github.com/sass/node-sass) `>= v3.0.0`
 
 ```js
 import sass from 'node-sass';
-import moduleImporter from 'sass-module-importer';
+import moduleImporter from 'sass-modules-importer';
 
 sass.render({
   file: './source/css/app.scss',
@@ -73,7 +73,7 @@ sass.render({
 ```js
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-import moduleImporter from 'sass-module-importer';
+import moduleImporter from 'sass-modules-importer';
 
 gulp.task('style', () => {
   return gulp.src('./source/css/app.scss')
@@ -92,7 +92,7 @@ moduleImporter({ basedir: path.join(__dirname, 'another-folder') });
 Use `npm test` to run the tests.
 
 ## Issues
-If you discover a bug, please raise an issue on Github. https://github.com/lucasmotta/sass-module-importer/issues
+If you discover a bug, please raise an issue on Github. https://github.com/TrigenSoftware/sass-modules-importer/issues
 
 ## Contributors
 The source code and the test are written in ES6 (ECMAScript 2015).  
