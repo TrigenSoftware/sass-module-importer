@@ -7,7 +7,7 @@ Simple importer for [node-sass](https://github.com/sass/node-sass) to import [np
 Say good-bye to all the mess with relative paths on your Sass files.  
 You can now import your Sass/SCSS modules by referencing to the module name, like this:
 
-```sass
+```scss
 @import "sass-easing";
 @import "quantum-colors";
 @import "inuit-defaults";
@@ -21,7 +21,7 @@ You can now import your Sass/SCSS modules by referencing to the module name, lik
 
 Just for comparison, look at this mess:
 
-```sass
+```scss
 @import "node_modules/sass-easing/_easings.scss";
 @import "bower_components/quantum-colors/_quantum-colors.scss";
 @import "bower_components/inuit-defaults/settings.defaults";
