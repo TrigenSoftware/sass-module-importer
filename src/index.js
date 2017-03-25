@@ -84,7 +84,10 @@ class ModuleImporter {
               if (!err && url !== moduleName) {
                 result = url.replace(
                   moduleName,
-                  result.replace(/(node_modules|bower_components)\/([^\/]*)(\/.*|)$/, `$1/${moduleName}`)
+                  result.replace(
+                    /(node_modules|bower_components)\/([^\/]*)(\/.*|)$/,
+                    `$1/${moduleName}`
+                  )
                 );
               }
 
