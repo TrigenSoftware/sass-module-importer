@@ -73,7 +73,10 @@ class ModuleImporter {
           if (resolvedPath) {
             resolve({ url, prev, resolved: true });
           } else {
-            const moduleName = url.split(path.sep)[0];
+            const parts = url.split(path.sep);
+            const moduleName = /^@/.test(url)
+              ? `${parts[0]}/${parts[1]}`
+              : parts[0];
 
             resolver(moduleName, this.options, (err, res) => {
               let result = res;
@@ -81,7 +84,7 @@ class ModuleImporter {
               if (!err && url !== moduleName) {
                 result = url.replace(
                   moduleName,
-                  result.replace(/(node_modules|bower_components)\/([^\/]*)(\/.*|)$/, '$1/$2')
+                  result.replace(/(node_modules|bower_components)\/([^\/]*)(\/.*|)$/, `$1/${moduleName}`)
                 );
               }
 
