@@ -12,7 +12,7 @@ class ModuleImporter {
   }
 
   resolve({ url, prev }) {
-    if (this.aliases.has(url)) {
+    if (this.aliases.has(url + prev)) {
       return Promise.resolve(this.aliases.get(url));
     }
 
@@ -21,7 +21,7 @@ class ModuleImporter {
       .then(file => this.bower(file))
       .then(file => this.read(file))
       .then((res) => {
-        this.aliases.set(url, res);
+        this.aliases.set(url + prev, res);
         return res;
       });
   }
